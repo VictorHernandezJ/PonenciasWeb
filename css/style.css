@@ -162,6 +162,22 @@ body {
   grid-column: 1/-1;
   justify-self: center;
   text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+/*Inscripción*/
+.registro {
+  background-color: #ff9933;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.registro p {
+  margin: 0 1rem 1rem 1rem;
+}
+.registro input {
+  justify-self: center;
+  width: 5rem;
+  height: 2rem;
 }
 /*footer*/
 .footer {
