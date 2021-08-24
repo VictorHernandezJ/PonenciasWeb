@@ -175,9 +175,12 @@ body {
   margin: 0 1rem 1rem 1rem;
 }
 .registro input {
-  justify-self: center;
-  width: 5rem;
-  height: 2rem;
+  margin: 0 1rem 1rem;
+  width: 7rem;
+  height: 2.5rem;
+  background-color: #ff9933;
+  border-radius: 0.5rem;
+  box-shadow: 3px 2.5px rgba(0, 0, 0, 0.2);
 }
 /*footer*/
 .footer {
@@ -221,5 +224,26 @@ footer i {
   .integrantes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 450px) {
+  .header {
+    justify-content: space-between;
+  }
+  .logo-empresa {
+    margin: 0;
+  }
+  .ponencias {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .ponentes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .integrantes {
+    background-color: rosybrown;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
