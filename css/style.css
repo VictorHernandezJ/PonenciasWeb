@@ -235,26 +235,24 @@ footer i {
   }
 
   .ponentes {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   .ponente {
-    flex-direction: column;
     align-items: center;
     padding: 5px;
   }
   .ponente .img {
-    margin: 1rem 0;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 10px;
+    width: 100px;
     height: 100px;
-    border-radius: 50%;
-    border: 1px solid black;
-    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.5rem;
   }
   .integrantes {
     background-color: rosybrown;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .integrantes .integrante .img {
+    width: 90px;
+    height: 90px;
+    margin: 0.5rem;
   }
 }
