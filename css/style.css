@@ -47,6 +47,7 @@ body {
 .menu-principal ul {
   height: 100%;
   display: flex;
+  margin-right: 1.875rem;
   justify-content: center;
   align-items: center;
 }
@@ -57,6 +58,7 @@ body {
 .menu-principal li a {
   text-decoration: none;
   text-transform: uppercase;
+  display: block;
 }
 .menu-principal li:hover > div {
   height: 0.25rem;
@@ -64,8 +66,12 @@ body {
 }
 .btn_menu {
   margin-right: 1.875rem;
+  font-size: 1.5625rem;
   cursor: pointer;
   display: none;
+}
+ul.show {
+  top: 4.0625rem;
 }
 .baner {
   grid-area: baner;
@@ -249,7 +255,6 @@ body {
   }
   .header {
     height: 4.0625rem;
-    justify-content: space-between;
   }
   .btn_menu {
     display: inline-flex;
@@ -257,15 +262,21 @@ body {
   .menu-principal ul {
     position: fixed;
     width: 100vw;
-    height: calc(100%-65px);
+    height: calc(100%-80px);
     top: -100vh;
     text-align: center;
     transition: all 0.4s;
     flex-direction: column;
   }
-  ul.show {
-    top: 4.0625rem;
+  .menu-principal ul li {
+    margin: 1.875rem 0 0 0;
+    line-height: 1.875rem;
   }
+  .menu-principal ul li a {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
   .logo-empresa {
     margin: 0;
   }
@@ -298,7 +309,7 @@ body {
     grid-column: 1/-1;
   }
 }
-@media screen and (max-width: 450px) and (orientation: landscape) {
+@media screen and (max-width: 850px) and (orientation: landscape) {
   .menu-principal ul li {
     margin: 0.3125rem 0 0 0;
   }
