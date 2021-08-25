@@ -315,7 +315,7 @@ ul.show {
   }
   .menu-principal ul {
     overflow: scroll;
-    height: calc(100%-65px);
+    height: calc(100%-80px);
   }
 }
 @media screen and (max-width: 450px) {
