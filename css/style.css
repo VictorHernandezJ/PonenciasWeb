@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: #fff;
+  font-size: 1.125rem;
   font-family: "adobe-clean", sans-serif;
 }
 body {
@@ -27,14 +28,14 @@ body {
   background-color: #333366;
   position: fixed;
   width: 90%;
-  height: 80px;
+  height: 5rem;
   display: flex;
   grid-area: header;
 }
 .logo-empresa {
-  width: 80px;
+  width: 5rem;
   height: 100%;
-  margin: 0 180px 0 80px;
+  margin: 0 11.25rem 0 5rem;
 }
 .logo-empresa img {
   width: 100%;
@@ -49,25 +50,31 @@ body {
 }
 .menu-principal li {
   list-style: none;
-  margin: 0 10px;
+  margin: 0 0.625rem;
 }
 .menu-principal li a {
   text-decoration: none;
   text-transform: uppercase;
 }
 .menu-principal li:hover > div {
-  height: 4px;
+  height: 0.25rem;
   background-image: linear-gradient(to right, #4f43ce, #823fbd, #af3cad);
 }
 
 .baner {
   grid-area: baner;
   width: 100%;
-  height: 700px;
+  height: 43.75rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.baner h2 {
+  font-size: 2rem;
+}
+.baner h3 {
+  font-size: 1.5rem;
 }
 .ponencias {
   margin: 3rem 0;
@@ -83,10 +90,10 @@ body {
 }
 .ponencia img,
 .datos {
-  margin: 0 10px;
+  margin: 0 0.625rem;
 }
 .ponencia .datos h2 {
-  margin: 10px 0;
+  margin: 0.625rem 0;
   text-align: center;
 }
 .ponentes {
@@ -100,18 +107,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5px;
+  padding: 0.3125rem;
 }
 .ponente .img {
   margin: 1rem 0;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 250px;
-  height: 250px;
+  width: 15.625rem;
+  height: 15.625rem;
   border-radius: 50%;
-  border: 1px solid black;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+  border: 0.0625rem solid black;
+  box-shadow: 0.3125rem 0.3125rem rgba(0, 0, 0, 0.2);
 }
 .ponente h3 {
   margin: 1rem;
@@ -155,8 +162,8 @@ body {
   align-items: center;
 }
 .integrantes .integrante .img {
-  width: 150px;
-  height: 150px;
+  width: 9.375rem;
+  height: 9.375rem;
 }
 
 .i1 .img {
@@ -190,30 +197,30 @@ body {
 /*footer*/
 .footer {
   width: 100%;
-  height: 300px;
+  height: 18.75rem;
   background-color: #ff9933;
   display: flex;
 }
 
 footer i {
-  font-size: 50px;
-  margin-top: 30px;
-  margin-right: 5px;
+  font-size: 3.125rem;
+  margin-top: 1.875rem;
+  margin-right: 0.3125rem;
 }
 
 .fa-instagram:hover {
-  font-size: 60px;
+  font-size: 3.75rem;
   color: #6c63ff;
 }
 
 .fa-facebook:hover {
-  font-size: 60px;
+  font-size: 3.75rem;
   color: #6c63ff;
 }
 
 @media screen and (max-width: 850px) {
   body {
-    font-size: 12px;
+    font-size: 0.875rem;
   }
   .header {
     justify-content: space-between;
@@ -228,8 +235,8 @@ footer i {
     grid-template-columns: repeat(2, 1fr);
   }
   .ponente .img {
-    width: 150px;
-    height: 150px;
+    width: 9.375rem;
+    height: 9.375rem;
     margin-bottom: 0.5rem;
   }
   .integrantes {
@@ -238,7 +245,7 @@ footer i {
 }
 @media screen and (max-width: 450px) {
   body {
-    font-size: 8px;
+    font-size: 0.75rem;
   }
   .logo-empresa {
     margin: 0;
@@ -248,19 +255,19 @@ footer i {
   }
   .ponente {
     align-items: center;
-    padding: 5px;
+    padding: 0.3125rem;
   }
   .ponente .img {
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
     margin-bottom: 0.5rem;
   }
   .integrantes {
     grid-template-columns: repeat(2, 1fr);
   }
   .integrantes .integrante .img {
-    width: 90px;
-    height: 90px;
+    width: 5.625rem;
+    height: 5.625rem;
     margin: 0.5rem 0 0 0;
   }
 }
