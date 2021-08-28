@@ -5,46 +5,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rusa</title>
+    <title>JIT</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/cb7323e60c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="grid">
-        <header class="header">
-            <div class="logo-empresa">
-                <img src="img/logo.png" alt="">
-            </div>
-            <nav class="menu-principal">
-                <ul id="otroModo">
-                    <li><a href="index.html">Sobre el evento</a>
-                        <div></div>
-                    </li>
-                    <li>
-                        <a href="#PONENCIAS">Programa</a>
-                        <div></div>
-                    </li>
-                    <li>
-                        <a href="#Ponentes">Ponentes</a>
-                        <div></div>
-                    </li>
-                    <li>
-                        <a href="#registrar">Inscribirse</a>
-                        <div></div>
-                    </li>
-                    <li>
-                        <a href="#team">Team</a>
-                        <div></div>
-                    </li>
-                </ul>
-            </nav>
-            <span class="btn_menu" onclick="showmenu()"><i class="fa fa-bars"></i></span>
-        </header>
-        <section class="baner">
-            <h2>I Jornada de Investigación Tecnológica cajamarca</h2>
-            <h3>JIT Cajamarca</h3>
-        </section>
+   
+    <header>
+        <a href="#" class="brand">JIT</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+          <div class="navigation-items">
+            <a href="#">SOBRE EL EVENTO</a>
+            <a href="#">PROGRAMA</a>
+            <a href="#">PONENTES</a>
+            <a href="#">INSCRIBIRSE</a>
+            <a href="#">TEAM</a>
+          </div>
+        </div>
+      </header>
+  
+      <section class="home">
+        <video class="video-slide active" src="img/1.mp4" autoplay muted loop></video>
+       
+        <div class="content active">
+          <h1>JIT.<br><span> </span></h1>
+          <p>I Jornada de Investigación Tecnológica</p>
+          <a href="#">Inscribirse</a>
+        </div>
+        
+        <div class="media-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </section>
+       
+      <script type="text/javascript">
+      //Javacript for responsive navigation menu
+      const menuBtn = document.querySelector(".menu-btn");
+      const navigation = document.querySelector(".navigation");
+  
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+     navigation.classList.toggle("active");
+      });
+  
+      //Javacript for video slider navigation
+      const btns = document.querySelectorAll(".nav-btn");
+      const slides = document.querySelectorAll(".video-slide");
+      const contents = document.querySelectorAll(".content");
+  
+      var sliderNav = function(manual){
+        btns.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+  
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+  
+        contents.forEach((content) => {
+          content.classList.remove("active");
+        });
+  
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+      }
+  
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          sliderNav(i);
+        });
+      });
+      </script>
+
         <section class="ponencias" id="PONENCIAS">
             <div class="titulo">
                 <h2>Ponencias</h2>
