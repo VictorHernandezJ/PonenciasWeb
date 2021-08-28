@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: #fff;
-  font-size: 1.125rem;
+  font-size: 1.1rem;
   font-family: "adobe-clean", sans-serif;
 }
 body {
@@ -17,7 +17,6 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(20, auto);
   grid-template-areas:
-    "header header header"
     "baner baner baner"
     "ponencias ponencias ponencias"
     "ponentes ponentes ponentes"
@@ -25,14 +24,13 @@ body {
     "integ integ integ";
 }
 .header {
-  background-color: #333366;
+  background-color: #8cc40b;
   position: fixed;
-  width: 90%;
-  height: 5rem;
+  width: 100vw;
+  height: 4.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  grid-area: header;
 }
 .logo-empresa {
   width: 5rem;
@@ -44,6 +42,12 @@ body {
   height: 100%;
 }
 /*menu*/
+#btnMenu {
+  display: none;
+}
+.header label {
+  display: none;
+}
 .menu-principal ul {
   height: 100%;
   display: flex;
@@ -64,15 +68,7 @@ body {
   height: 0.25rem;
   background-image: linear-gradient(to right, #4f43ce, #823fbd, #af3cad);
 }
-.btn_menu {
-  margin-right: 1.875rem;
-  font-size: 1.5625rem;
-  cursor: pointer;
-  display: none;
-}
-ul.show {
-  top: 4.0625rem;
-}
+
 .baner {
   grid-area: baner;
   width: 100%;
@@ -251,34 +247,43 @@ ul.show {
 
 @media screen and (max-width: 850px) {
   body {
-    font-size: 0.875rem;
+    font-size: 5px;
   }
   .header {
     height: 4.0625rem;
+    background-color: #ff9933;
+    justify-content: space-around;
   }
-  .btn_menu {
-    display: inline-flex;
-  }
-  .menu-principal ul {
-    position: fixed;
-    width: 100vw;
-    height: calc(100%-80px);
-    top: -100vh;
-    text-align: center;
-    transition: all 0.4s;
-    flex-direction: column;
-  }
-  .menu-principal ul li {
-    margin: 1.875rem 0 0 0;
-    line-height: 1.875rem;
-  }
-  .menu-principal ul li a {
-    font-size: 1.25rem;
-    font-weight: bold;
+  .header label {
+    display: block;
   }
 
   .logo-empresa {
     margin: 0;
+  }
+
+  .menu-principal {
+    width: 100vw;
+    position: absolute;
+    top: 4rem;
+    right: -100%;
+  }
+  .menu-principal ul {
+    width: 100%;
+    flex-direction: column;
+    background-color: sandybrown;
+  }
+  .menu-principal ul li {
+    text-align: center;
+    height: 2rem;
+    padding: 1rem;
+  }
+  .menu-principal ul li:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  #btnMenu:checked ~ .menu-principal {
+    right: 0;
+    transition: 0.3s;
   }
 
   .ponencias {
@@ -309,16 +314,8 @@ ul.show {
     grid-column: 1/-1;
   }
 }
-@media screen and (max-width: 850px) and (orientation: landscape) {
-  .menu-principal ul li {
-    margin: 0.3125rem 0 0 0;
-  }
-  .menu-principal ul {
-    overflow: scroll;
-    height: calc(100%-80px);
-  }
-}
-@media screen and (max-width: 450px) {
+
+@media screen and (max-width: 490px) {
   body {
     font-size: 0.75rem;
   }
@@ -333,9 +330,6 @@ ul.show {
     width: 6.25rem;
     height: 6.25rem;
     margin-bottom: 0.5rem;
-  }
-  .integrantes {
-    grid-template-columns: repeat(2, 1fr);
   }
   .integrantes .integrante .img {
     width: 5.625rem;

@@ -11,36 +11,37 @@
 </head>
 
 <body>
+    <header class="header">
+        <div class="logo-empresa">
+            <img src="img/logo.png" alt="">
+        </div>
+        <input type="checkbox" id="btnMenu">
+        <label for="btnMenu"><i class="fa fa-bars"></i></label>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="index.html">Sobre el evento</a>
+                    <div></div>
+                </li>
+                <li>
+                    <a href="#PONENCIAS">Programa</a>
+                    <div></div>
+                </li>
+                <li>
+                    <a href="#Ponentes">Ponentes</a>
+                    <div></div>
+                </li>
+                <li>
+                    <a href="#registrar">Inscribirse</a>
+                    <div></div>
+                </li>
+                <li>
+                    <a href="#team">Team</a>
+                    <div></div>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <div class="grid">
-        <header class="header">
-            <div class="logo-empresa">
-                <img src="img/logo.png" alt="">
-            </div>
-            <nav class="menu-principal">
-                <ul id="otroModo">
-                    <li><a href="index.html">Sobre el evento</a>
-                        <div></div>
-                    </li>
-                    <li>
-                        <a href="#PONENCIAS">Programa</a>
-                        <div></div>
-                    </li>
-                    <li>
-                        <a href="#Ponentes">Ponentes</a>
-                        <div></div>
-                    </li>
-                    <li>
-                        <a href="#registrar">Inscribirse</a>
-                        <div></div>
-                    </li>
-                    <li>
-                        <a href="#team">Team</a>
-                        <div></div>
-                    </li>
-                </ul>
-            </nav>
-            <span class="btn_menu" onclick="showmenu()"><i class="fa fa-bars"></i></span>
-        </header>
         <section class="baner">
             <h2>I Jornada de Investigación Tecnológica cajamarca</h2>
             <h3>JIT Cajamarca</h3>
@@ -297,11 +298,5 @@
             <i class="fab fa-facebook">Name Pag</i>
         </div>
     </footer>
-    <script>
-        function showmenu(){
-            document.getElementById("otroModo").classList.toggle("show")
-        }
-    </script>
 </body>
-
 </html>
